@@ -124,3 +124,21 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 .copyright { text-align: center; opacity: .75; margin: 2.5rem 0 0; font-size: .85rem; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+/* ---------- Bandeau défilant ---------- */
+.marquee { overflow: hidden; background: var(--cream); color: var(--teal-dark); border-block: 1px solid rgba(63,123,125,.25); padding: 1.1rem 0; font: 500 clamp(1.1rem, 2.5vw, 1.6rem) var(--font-title); white-space: nowrap; }
+.marquee__track { display: inline-flex; animation: marquee 40s linear infinite; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee__track { animation: none; } }
+
+.intro .btn { margin-top: 1rem; }
+.site-footer address { font-style: normal; }
+.site-footer .social { flex-direction: column; gap: .5rem; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+/* ---------- Page simple (mentions légales) ---------- */
+.page { padding: 8rem 0 4rem; }
+.page h1 { font-size: clamp(2rem, 5vw, 3rem); color: var(--teal-dark); }
+.page h2 { font-size: 1.4rem; margin-top: 2rem; color: var(--teal-dark); }
+.site-header--solid { background: var(--ink); }
